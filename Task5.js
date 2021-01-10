@@ -1,11 +1,16 @@
-var a = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9,3];
-document.write("Given Sample [",a,"]");
-for (i=0; i<a.length; i++){
-    for (j=(i+1); j<a.length; j++){
-        if (a[i] === a[j]){
-            a.splice(j,j);   
+var array = [3,"a","a","a",2,3,"a",3,"a",2,4,9,3];
+var newArray =[];
+document.write("Given Sample [",array,"]");
+document.write("<br>");
+for (i=0; i<array.length; i++){
+    for (j=i+1; j<array.length; j++){
+        if ( array[i] === array[j]){
+            array[j] = " ";
         }
+    }
+    if (array[i] !== " "){
+        newArray.push(array[i])
     }
 }
 document.write("<br>");document.write("<br>");
-document.write("Sample Output [",a,"]");
+document.write("Output Sample [",newArray,"]");
